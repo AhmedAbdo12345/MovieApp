@@ -18,6 +18,6 @@
         android:label="DetailsFragment" >
         <argument
             android:name="movie"
-            app:argType="com.example.movieapp.domain.model.MovieResponse$Results" />
+            app:argType="com.example.movieapp.domain.model.MinMovie" />
     </fragment>
 </navigation>
