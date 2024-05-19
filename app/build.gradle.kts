@@ -39,6 +39,7 @@ android {
     buildFeatures{
      //   dataBinding = true
         viewBinding = true
+        buildConfig = true
     }
     kapt {
         correctErrorTypes = true
@@ -65,6 +66,7 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
 
+    implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
     //----------------GSON--------------------------------------------------
     implementation("com.google.code.gson:gson:2.10.1")
 
@@ -84,4 +86,12 @@ dependencies {
     //-----------------dagger hilt 2----------------------------------------
     implementation("com.google.dagger:hilt-android:2.48.1")
     kapt("com.google.dagger:hilt-android-compiler:2.48.1")
+
+    //--------------------WorkManger---------------------------------
+    implementation("androidx.work:work-runtime-ktx:2.9.0")
+
+    //--------------------Hilt with Worker----------------------------------------
+    implementation("androidx.hilt:hilt-work:1.2.0")
+    kapt("androidx.hilt:hilt-compiler:1.2.0")
+
 }
